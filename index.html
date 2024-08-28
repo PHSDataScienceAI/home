@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -525,43 +525,13 @@
         </div>
         <div class="panel">
             <h3>Send Us a Message</h3>
-            <form id="contact-form" style="display: flex; flex-direction: column; width: 100%; max-width: 600px;">
-                <div style="margin-bottom: 1em;">
-                    <label for="name" style="display: block; margin-bottom: 0.5em;">Name:</label>
-                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; background-color: #f0f0f0;">
-                </div>
-                <div style="margin-bottom: 1em;">
-                    <label for="message" style="display: block; margin-bottom: 0.5em;">Message:</label>
-                    <textarea id="message" name="message" rows="10" required style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; background-color: #f0f0f0; font-size: 1em;"></textarea>
-                </div>
-                <button type="submit" style="background-color: #118DF0; color: #fff; padding: 0.7em 1.2em; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; align-self: flex-start;">Send Message</button>
-            </form>
+            <p>If you have any questions or inquiries about the Prosper High School Data Science and AI Club, please email us at ssaraf.research@gmail.com.</p>
         </div>
         <div class="map-container">
             <iframe frameborder="0" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=prosper%20independent%20school%20district&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"></iframe>
         </div>
     </section>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function() {
-        emailjs.init('1P21IDYR4g5BZmJBn');
-    })();
-</script>
-<script type="text/javascript">
-    window.onload = function() {
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            emailjs.sendForm('service_f611nld', 'template_your_template_id', this)
-                .then(function() {
-                    alert('Your message has been sent successfully!');
-                }, function(error) {
-                    alert('There was an error sending your message. Please try again.');
-                });
-        });
-    }
-</script>
 
 
 </body>
