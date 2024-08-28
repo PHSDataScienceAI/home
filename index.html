@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="PHS Data Science and AI Club - Welcome" name="description"/>
+    <title>index</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #ddd;
+            background-color: #333;
+        }
+        header {
+            background: #118DF0; /* Blue bar */
+            color: #ddd;
+            padding: 12px 0; /* Adjusted padding */
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 70px; /* Adjusted smaller size for the logo */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any default inline spacing */
+            margin-right: 10px; /* Add margin for spacing */
+        }
+        header h1 {
+            margin: 0;
+            padding: 0;
+            color: #ddd;
+            font-size: 20px; /* Adjusted font size */
+            font-weight: normal;
+            flex: 1; /* Allow the title to take up remaining space */
+            white-space: nowrap; /* Prevent wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Show ellipsis for overflow text */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #ddd;
+            text-decoration: none;
+            padding: 8px 12px; /* Adjusted padding */
+            display: block;
+            font-size: 14px; /* Adjusted font size */
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main-content {
+            padding: 20px;
+            background: #444;
+            margin-top: 120px; /* Adjusted margin */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #ddd;
+        }
+        h1, h2, h3, h4 {
+            color: #ddd;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .panel {
+            padding: 18px; /* Adjusted padding for uniformity */
+            background-color: #333;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .panel h3 {
+            margin-bottom: 10px;
+            color: #118DF0; /* Blue text color */
+        }
+        .panel p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        .panel ul {
+            margin-bottom: 15px;
+            padding-left: 20px; /* Added padding for lists */
+        }
+        .panel ul li {
+            margin-bottom: 8px;
+            color: #ddd;
+        }
+        .interactive-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #555;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .interactive-section h3 {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        .interactive-section p {
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+        .interactive-section .tri-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .interactive-section .tri-section .section {
+            width: calc(50% - 10px);
+            padding: 10px;
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .interactive-section .tri-section .section h4 {
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+        .interactive-section .tri-section .section p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        .interactive-section .tri-section .section:not(:last-child) {
+            margin-right: 10px;
+        }
+        .skills-and-requirements {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .skills-and-requirements .section {
+            width: calc(50% - 10px);
+            padding: 10px;
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .skills-and-requirements .section h3 {
+            margin-bottom: 10px;
+            color: #118DF0; /* Blue text color */
+        }
+        .skills-and-requirements .section p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        .skills-and-requirements .section:not(:last-child) {
+            margin-right: 10px;
+        }
+        .divider {
+            width: 1px;
+            background-color: #666;
+            height: 40px; /* Height of the divider */
+            margin: 0 15px;
+        }
+        .blue {
+            color: #7DF9FF; /* Updated link text color */
+        }
+        .blue a {
+            color: #7DF9FF; /* Updated link color */
+            text-decoration: underline; /* Underline links */
+        }
+        .white {
+            color: #FFFFFF; /* Updated link text color */
+            text-decoration: none;
+        }
+        .white a {
+            color: #FFFFFF; /* Updated link color */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <div class="container">
+        <a href="#top"><img alt="PHS Data Science and AI Club Logo" src="PDSA_Logo.png"/></a>
+        <nav><ul>
+            <h1><a class="white" href="#top">PHS Data Science and AI Club</a></h1>
+        </ul></nav>
+        <div class="divider"></div>
+        <nav>
+            <ul>
+                <li><a class="white" href="#top">Welcome</a></li>
+                <li><a class="white" href="#2_">Basics of Data Science and AI</a></li>
+                <li><a class="white" href="#3_">Daily Lessons</a></li>
+                <li><a class="white" href="#4_">Join the Club</a></li>
+                <li><a class="white" href="#5_">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="container main-content">
+        <section>
+            <h2>Welcome to the PHS Data Science and AI Club</h2>
+            <div class="panel">
+                <h3>About Us</h3>
+                <p>The Prosper High School (PHS) Data Science and AI Club is a student-driven organization dedicated to exploring and applying the principles of data science. Our club provides students with the opportunity to dive into the world of data analytics, where they learn how to collect, process, and analyze data to make informed decisions and uncover insights.</p>
+            </div>
+
+            <div class="panel">
+                <h3>Our Mission and Goals</h3>
+                <p>At the heart of the PHS Data Science and AI Club is a commitment to education and skill-building. We offer workshops, guest lectures, and collaborative projects that cover various aspects of data science, including statistical analysis, machine learning, and data visualization.</p>
+                <h4>Goals</h4>
+                <ul>
+                    <li>Empower students with data literacy and analytical skills.</li>
+                    <li>Encourage innovation through data-driven solutions.</li>
+                    <li>Promote collaboration and networking among members.</li>
+                    <li>Prepare students for success in academic and professional data science environments.</li>
+                </ul>
+            </div>
+
+            <div class="panel skills-and-requirements">
+                <div class="section">
+                    <h3>Skills Needed for Applicants</h3>
+                    <p>Applicants should have a basic understanding of statistics, proficiency in data analysis tools like Python or R, curiosity to learn new data science techniques, and strong communication skills.</p>
+                </div>
+                <div class="section">
+                    <h3>Our Stock Market Project</h3>
+                    <p>Learn about our ongoing project analyzing stock market data using data science techniques and Machine Learning. Officers have the opportunity to work on our Stock Market App.</p>
+                </div>
+            </div>
+
+            <!--Duplicated skills-and-requirements panel with tri-section content -->
+            <div class="panel skills-and-requirements">
+                <div class="section">
+                    <h3>Explore Our Prototypes</h3>
+                    <p class="blue">So far, we have developed two prototype Python AI Models on Google Colab. The first model evaluates confidence and accuracy using statistical metrics such as R² and Linear Regression, while the second model serves as a prediction tool trained on a mean-squared error model and several other essential statistical concepts. </p>
+                    <ul><a class="blue" href="https://colab.research.google.com/drive/1Au0OYK8pT3pyLoNi3qm3WpHA4db8SHty?usp=sharing" rel="noopener noreferrer" target="_blank">Explore the 1st Prototype</a></ul>
+		    <ul><a class="blue" href="https://colab.research.google.com/drive/1jEDmdbwLGllqTq3YgyEVkw7DIyXxRkuy?usp=sharing" rel="noopener noreferrer" target="_blank">Explore the 2nd Prototype</a></ul>
+                </div>
+                <div class="section">
+                    <h3>Interactive Workshops</h3>
+                    <p class="blue">Participate in hands-on workshops where you can apply data science concepts to practical scenarios. Enhance your skills and collaborate with peers.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+<a name="2_"></a>
+
+    <header>
+    <div class="container">
+        <a href="#top"><img alt="PHS Data Science and AI Club Logo" src="PDSA_Logo.png"/></a>
+        <nav><ul>
+            <h1><a class="white" href="#top">PHS Data Science and AI Club</a></h1>
+        </ul></nav>
+        <div class="divider"></div>
+        <nav>
+            <ul>
+                <li><a class="white" href="#top">Welcome</a></li>
+                <li><a class="white" href="#2_">Basics of Data Science</a></li>
+                <li><a class="white" href="#3_">Daily Lessons</a></li>
+                <li><a class="white" href="#4_">Join the Club</a></li>
+                <li><a class="white" href="#5_">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="container main-content">
+        <section>
+            <h2>Basics of Data Science</h2>
+            <div class="panel">
+                <h3>Introduction to Data Science</h3>
+                <p>Data science is a multidisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It combines aspects of statistics, computer science, and domain expertise to solve complex problems.</p>
+            </div>
+
+            <div class="panel">
+                <h3>Core Concepts</h3>
+                <ul>
+                    <li><strong>Statistics:</strong> The foundation of data science, involving data collection, analysis, interpretation, presentation, and organization.</li>
+                    <li><strong>Machine Learning:</strong> A method of data analysis that automates analytical model building, allowing systems to learn from data, identify patterns, and make decisions with minimal human intervention.</li>
+                    <li><strong>Data Mining:</strong> The process of discovering patterns in large data sets using methods at the intersection of machine learning, statistics, and database systems.</li>
+                    <li><strong>Data Visualization:</strong> The graphical representation of data to help understand complex data sets and derive insights.</li>
+                </ul>
+            </div>
+
+            <div class="panel">
+                <h3>Tools and Technologies</h3>
+                <p>Data scientists use a variety of tools and technologies to analyze data. Some popular tools include:</p>
+                <ul>
+                    <li>Programming Languages: Python, R</li>
+                    <li>Data Manipulation: Pandas, NumPy</li>
+                    <li>Data Visualization: Matplotlib, Seaborn, Tableau</li>
+                    <li>Machine Learning: Scikit-Learn, TensorFlow, Keras</li>
+                    <li>Big Data: Hadoop, Spark</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+<a name="3_"></a>
+
+<header>
+    <div class="container">
+        <a href="#top"><img alt="PHS Data Science and AI Club Logo" src="PDSA_Logo.png"/></a>
+        <nav><ul>
+            <h1><a class="white" href="#top">PHS Data Science and AI Club</a></h1>
+        </ul></nav>
+        <div class="divider"></div>
+        <nav>
+            <ul>
+                <li><a class="white" href="#top">Welcome</a></li>
+                <li><a class="white" href="#2_">Basics of Data Science</a></li>
+                <li><a class="white" href="#3_">Daily Lessons</a></li>
+                <li><a class="white" href="#4_">Join the Club</a></li>
+                <li><a class="white" href="#5_">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="container main-content">
+        <section>
+            <h2>Daily Lessons</h2>
+            <div class="panel">
+                <h3>Lesson 1: Introduction to Data Science</h3>
+                <p>Welcome to the world of data science! In this lesson, we will cover the basics of data science, including its definition, importance, and applications in various fields.</p>
+                <ul>
+                    <li>What is Data Science?</li>
+                    <li>The Importance of Data Science</li>
+                    <li>Applications of Data Science</li>
+                </ul>
+				<p>
+				<a class="blue" href="https://docs.google.com/presentation/d/1opUQsQDmTGCF9UmPLDU7r5EW1g_q-BQJUOAFO-w7gWQ/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Intro to Data Science - Google Slides </a>
+				</p>
+				
+            </div>
+            <div class="panel">
+                <h3>Lesson 2: Data Collection and Cleaning</h3>
+                <p>Data collection and cleaning are critical steps in the data science process. In this lesson, we will learn how to gather data from various sources and clean it for analysis.</p>
+                <ul>
+                    <li>Data Collection Methods</li>
+                    <li>Data Cleaning Techniques</li>
+                    <li>Handling Missing Data</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h3>Lesson 3: Exploratory Data Analysis</h3>
+                <p>Exploratory data analysis (EDA) is an essential part of the data science process. In this lesson, we will explore different techniques to analyze and visualize data.</p>
+                <ul>
+                    <li>Data Visualization Tools</li>
+                    <li>Descriptive Statistics</li>
+                    <li>Identifying Patterns and Trends</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h3>Lesson 4: Machine Learning Basics</h3>
+                <p>Machine learning is a key component of data science. In this lesson, we will introduce the basics of machine learning, including its types, algorithms, and applications.</p>
+                <ul>
+                    <li>Types of Machine Learning</li>
+                    <li>Common Machine Learning Algorithms</li>
+                    <li>Applications of Machine Learning</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+<a name="4_"></a>
+
+<header>
+    <div class="container">
+        <a href="#top"><img alt="PHS Data Science and AI Club Logo" src="PDSA_Logo.png"/></a>
+        <nav><ul>
+            <h1><a class="white" href="#top">PHS Data Science and AI Club</a></h1>
+        </ul></nav>
+        <div class="divider"></div>
+        <nav>
+            <ul>
+                <li><a class="white" href="#top">Welcome</a></li>
+                <li><a class="white" href="#2_">Basics of Data Science</a></li>
+                <li><a class="white" href="#3_">Daily Lessons</a></li>
+                <li><a class="white" href="#4_">Join the Club</a></li>
+                <li><a class="white" href="#5_">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <a name="4_"></a>
+
+   <header>
+    <div class="container">
+        <a href="#top"><img alt="PHS Data Science and AI Club Logo" src="PDSA_Logo.png"/></a>
+        <nav><ul>
+            <h1><a class="white" href="#top">PHS Data Science and AI Club</a></h1>
+        </ul></nav>
+        <div class="divider"></div>
+        <nav>
+            <ul>
+                <li><a class="white" href="#top">Welcome</a></li>
+                <li><a class="white" href="#2_">Basics of Data Science</a></li>
+                <li><a class="white" href="#3_">Daily Lessons</a></li>
+                <li><a class="white" href="#4_">Join the Club</a></li>
+                <li><a class="white" href="#5_">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="container main-content">
+        <section>
+            <h2>Join the PHS Data Science and AI Club</h2>
+            <div class="panel">
+                <h3>Why Join Us?</h3>
+                <p>Joining the PHS Data Science and AI Club offers numerous benefits that can significantly enhance your knowledge, skills, and career prospects in the field of data science. Here are some of the key advantages:</p>
+                <ul>
+                    <li>Opportunities to work on real-world data science projects.</li>
+                    <li>Access to workshops and seminars conducted by industry professionals.</li>
+                    <li>Networking with peers and professionals in the field of data science.</li>
+                    <li>Enhancing your resume with valuable skills and experiences.</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h3>Membership Requirements</h3>
+                <p>To become a member, you should:</p>
+                <ul>
+                    <li>Have a keen interest in data science and related fields.</li>
+                    <li>Be willing to actively participate in club activities and projects.</li>
+                    <li>Maintain good academic standing.</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h3>How to Apply</h3>
+                <p>Fill out the form below to submit your application. We look forward to having you join our community!</p>
+            </div>
+            <div class="panel">
+                <iframe frameborder="0" height="1851" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLScQ1zn4QXqcXNBq14X9oE0GjcSImRjtM1s-37rciCnLRpMxtQ/viewform?embedded=true" width="640">Loading…</iframe>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<a name="5_"></a>
+
+ <header>
+    <div class="container">
+        <a href="#top"><img alt="PHS Data Science and AI Club Logo" src="PDSA_Logo.png"/></a>
+        <nav><ul>
+            <h1><a class="white" href="#top">PHS Data Science and AI Club</a></h1>
+        </ul></nav>
+        <div class="divider"></div>
+        <nav>
+            <ul>
+                <li><a class="white" href="#top">Welcome</a></li>
+                <li><a class="white" href="#2_">Basics of Data Science</a></li>
+                <li><a class="white" href="#3_">Daily Lessons</a></li>
+                <li><a class="white" href="#4_">Join the Club</a></li>
+                <li><a class="white" href="#5_">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="container main-content">
+    <section>
+        <h2>Contact Us</h2>
+        <div class="panel">
+            <h3>Get in Touch</h3>
+            <p>If you have any questions or would like to dive deeper into the activities, events, and opportunities our club offers, please don’t hesitate to get in touch with us. Our team is dedicated to providing you with all the information you need and ensuring you have a great experience. Whether you're curious about membership benefits, upcoming events, or ways to get involved, we’re here to assist and support you every step of the way. Reach out and let us help you connect with everything our club has to offer!</p>
+        </div>
+        <div class="panel">
+            <h3>Send Us a Message</h3>
+            <form id="contact-form" style="display: flex; flex-direction: column; width: 100%; max-width: 600px;">
+                <div style="margin-bottom: 1em;">
+                    <label for="name" style="display: block; margin-bottom: 0.5em;">Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; background-color: #f0f0f0;">
+                </div>
+                <div style="margin-bottom: 1em;">
+                    <label for="message" style="display: block; margin-bottom: 0.5em;">Message:</label>
+                    <textarea id="message" name="message" rows="10" required style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; background-color: #f0f0f0; font-size: 1em;"></textarea>
+                </div>
+                <button type="submit" style="background-color: #118DF0; color: #fff; padding: 0.7em 1.2em; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; align-self: flex-start;">Send Message</button>
+            </form>
+        </div>
+        <div class="map-container">
+            <iframe frameborder="0" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=prosper%20independent%20school%20district&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"></iframe>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init('1P21IDYR4g5BZmJBn');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_f611nld', 'template_your_template_id', this)
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    alert('There was an error sending your message. Please try again.');
+                });
+        });
+    }
+</script>
+
+
+</body>
+</html>
